@@ -2,6 +2,7 @@ import { ProjectSlider } from "@/components/project-slider/ProjectSlider";
 import {
   AboutUs,
   Blogs,
+  Faq,
   FloatingElements,
   Footer,
   Header,
@@ -33,6 +34,9 @@ export default function Home() {
       </section>
       <section className="py-10 px-3">
         <Pricing />
+      </section>
+      <section className="py-10 px-3">
+        <Faq />
       </section>
       <section className="py-10 px-3">
         <Blogs />

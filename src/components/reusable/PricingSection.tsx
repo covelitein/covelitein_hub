@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import HighlightMiddleWord from "./HighlightMiddleWord";
 
 export const PricingSection = ({
   plans,
@@ -10,8 +11,10 @@ export const PricingSection = ({
   className?: string;
 }) => (
   <section className={cn("", className)}>
-    <div className="max-w-7xl mx-auto sm:text-center">
-      <h2 className="text-4xl font-bold mb-4">{title}</h2>
+    <div className="max-w-7xl mx-auto">
+      <h2 className="text-4xl font-bold mb-4">
+        <HighlightMiddleWord text={title}/>
+      </h2>
       <p className="text-gray-600 mb-10">
         Choose the plan that best suits your needs and goals.
       </p>

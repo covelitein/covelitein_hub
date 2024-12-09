@@ -7,6 +7,7 @@ import Services from "./Services";
 import Pricing from "./Pricing";
 import { Review } from "./Review";
 import Blogs from "./Blogs";
+import Faq from "./Faq";
 import Footer from "./Footer";
 
 export {
@@ -19,5 +20,6 @@ export {
   Pricing,
   Review,
   Blogs,
+  Faq,
   Footer,
 };

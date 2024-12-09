@@ -42,7 +42,7 @@ const BlogCard = ({ blog }: { blog: any }) => (
 
 const Blogs = () => (
   <section className="py-12">
-    <div className="max-w-6xl mx-auto sm:text-center">
+    <div className="max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold mb-6">Latest Blogs</h2>
       <p className="text-gray-600 mb-10">
         Stay updated with our insights on technology, design, and development.
