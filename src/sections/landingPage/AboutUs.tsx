@@ -31,7 +31,7 @@ export default function AboutUs() {
       exit="hidden"
     >
       <div className="max-w-6xl mx-auto">
-        <motion.div variants={textVariant} className="sm:text-center">
+        <motion.div variants={textVariant} className="">
           <h3 className="text-3xl md:text-5xl font-bold mb-5">
             Who <span className="text-blue-600">We</span> Are?
           </h3>

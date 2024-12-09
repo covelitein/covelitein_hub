@@ -3,8 +3,10 @@ import { reviews } from "@/constants";
 
 export const Review = () => (
   <section className="">
-    <div className="max-w-6xl mx-auto md:text-center">
-      <h2 className="text-3xl md:text-5xl font-bold md:mb-6">What Our Clients Say</h2>
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-3xl md:text-5xl font-bold md:mb-4">
+        What <span className="text-blue-600">Our Clients</span> Say
+      </h2>
       <p className="text-gray-600 mb-10">
         Hear from the people we&apos;ve helped achieve their goals.
       </p>

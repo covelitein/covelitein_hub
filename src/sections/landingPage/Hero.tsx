@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="min-h-[80vh] flex justify-center items-center px-4">
       <div className="max-w-4xl w-full">
-        <h3 className="text-4xl md:text-6xl lg:text-7xl md:text-center font-bold leading-tight relative max-sm:mt-10">
+        <h3 className="text-4xl md:text-6xl lg:text-7xl md:text-center font-bold leading-tight relative mt-16">
           Innovative Strategies for Modern Businesses.
           <img
             src="/illustrations/rays-of-light.svg"
@@ -23,7 +23,7 @@ export default function Hero() {
           businesses striving to achieve significant tech leverage.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="px-8 py-4 w-full sm:w-auto">Get Touch</Button>
+          <Button className="px-8 py-4 w-full sm:w-auto">Get In Touch</Button>
           <Button className="px-8 py-4 w-full sm:w-auto text-blue-600 bg-white border-white hover:bg-white hover:text-blue-700">
             Learn More
           </Button>

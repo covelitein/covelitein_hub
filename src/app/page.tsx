@@ -14,7 +14,7 @@ import {
 export default function Home() {
   return (
     <section className="">
-      <main className="bg min-h-screen">
+      <main className="bg min-h-screen pb-10">
         <Header />
         <Hero />
         <FloatingElements />
