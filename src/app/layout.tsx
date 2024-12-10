@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       ? `${process.env.APP_URL}`
       : process.env.VERCEL_URL
       ? `https://${
-          process.env.VERCEL_URL || "https://covelitein-hub.vercel.app/"
+          process.env.VERCEL_URL || "covelitein-hub.vercel.app"
         }`
       : `http://localhost:${process.env.PORT || 3000}`
   ),
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/imgs/l.jpg",
+        url: "https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/469693135_1370358640609131_8794368040634332744_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHgvAXBI3hQdmHZfvG9lYCQSCamk_Uh4JRIJqaT9SHglCa-oy0zXj7JEgJ5oTNTSn3l2To9mY8Mf8zevjaHwdBK&_nc_ohc=t-2zpAra09QQ7kNvgGD9hSc&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&_nc_gid=AvELAL3D3SZ_fS88fYxK2dB&oh=00_AYBNovQDQe45eareFpLo0ZX4d2cQFlCZs3qjSvZoZVku5Q&oe=675E5828",
         width: 1200,
         height: 630,
         alt: "CoveliteinsHub - Empowering Businesses",
@@ -47,7 +47,9 @@ export const metadata: Metadata = {
     title: "CoveliteinsHub - Your Gateway to Innovation",
     description:
       "Discover how CoveliteinsHub empowers businesses with innovative solutions, cutting-edge technology, and seamless user experiences.",
-    images: ["/imgs/l.jpg"],
+    images: [
+      "https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/469693135_1370358640609131_8794368040634332744_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHgvAXBI3hQdmHZfvG9lYCQSCamk_Uh4JRIJqaT9SHglCa-oy0zXj7JEgJ5oTNTSn3l2To9mY8Mf8zevjaHwdBK&_nc_ohc=t-2zpAra09QQ7kNvgGD9hSc&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&_nc_gid=AvELAL3D3SZ_fS88fYxK2dB&oh=00_AYBNovQDQe45eareFpLo0ZX4d2cQFlCZs3qjSvZoZVku5Q&oe=675E5828",
+    ],
   },
 };
 
