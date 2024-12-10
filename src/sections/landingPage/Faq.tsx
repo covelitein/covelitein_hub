@@ -18,7 +18,7 @@ export default function Faq() {
         </h2>
         <Accordion type="single" collapsible>
           <AccordionItem value="question-1">
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg font-semibold text-left max-sm:text-sm hover:no-underline">
               What services do you offer?
             </AccordionTrigger>
             <AccordionContent>
@@ -28,7 +28,7 @@ export default function Faq() {
           </AccordionItem>
 
           <AccordionItem value="question-2">
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg font-semibold text-left max-sm:text-sm hover:no-underline">
               How long does it take to build a website?
             </AccordionTrigger>
             <AccordionContent>
@@ -38,7 +38,7 @@ export default function Faq() {
           </AccordionItem>
 
           <AccordionItem value="question-3">
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg font-semibold text-left max-sm:text-sm hover:no-underline">
               Do you provide ongoing support?
             </AccordionTrigger>
             <AccordionContent>
@@ -48,7 +48,7 @@ export default function Faq() {
           </AccordionItem>
 
           <AccordionItem value="question-4">
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg font-semibold text-left max-sm:text-sm hover:no-underline">
               What is your pricing structure?
             </AccordionTrigger>
             <AccordionContent>
@@ -58,7 +58,7 @@ export default function Faq() {
           </AccordionItem>
 
           <AccordionItem value="question-5">
-            <AccordionTrigger className="text-lg font-semibold">
+            <AccordionTrigger className="text-lg font-semibold text-left max-sm:text-sm hover:no-underline">
               Can you work with my existing team?
             </AccordionTrigger>
             <AccordionContent>

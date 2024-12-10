@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NextUITheme } from "@/client_theme";
 import localFont from "next/font/local";
 import "./globals.css";
+
 const openSans = localFont({
   src: [
     {
@@ -15,7 +16,9 @@ export const metadata: Metadata = {
     process.env.APP_URL
       ? `${process.env.APP_URL}`
       : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL || 'https://covelitein-hub.vercel.app/'}`
+      ? `https://${
+          process.env.VERCEL_URL || "https://covelitein-hub.vercel.app/"
+        }`
       : `http://localhost:${process.env.PORT || 3000}`
   ),
   title: "CoveliteinsHub - Your Gateway to Innovation",
