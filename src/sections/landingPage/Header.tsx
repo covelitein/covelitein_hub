@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
+import { navigationLinks } from "@/constants";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,11 @@ export default function Header() {
       opacity: 1,
       transition: { duration: 0.5, ease: "easeInOut" },
     },
-    exit: { y: "-100%", opacity: 0, transition: { duration: 0.4, ease: "easeIn" } },
+    exit: {
+      y: "-100%",
+      opacity: 0,
+      transition: { duration: 0.4, ease: "easeIn" },
+    },
   };
 
   return (
@@ -30,27 +35,28 @@ export default function Header() {
         </Link>
 
         {/* Navigation Links for Desktop */}
-        <ul className="hidden md:flex items-center gap-6">
-          {["About", "Services", "Projects", "Reviews", "Pricing", "Blogs"].map(
-            (item) => (
-              <li key={item} className="cursor-pointer">
-                <Link className="text-black font-medium hover:text-blue-700 transition">
-                  {item}
-                </Link>
-              </li>
-            )
-          )}
+        <ul className="hidden lg:flex items-center gap-6">
+          {navigationLinks.map((link) => (
+            <li key={link.label} className="cursor-pointer">
+              <Link
+                href={link.href}
+                className="text-black font-medium hover:text-blue-700 transition"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Get in Touch Button for Desktop */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Button className="text-sm bg-blue-700 py-2 px-5 text-white rounded-md font-semibold hover:bg-blue-800">
             Get in Touch
           </Button>
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="block md:hidden">
+        <div className="block lg:hidden">
           <Button
             className="bg-blue-700 text-white px-3 py-2 rounded-md"
             onClick={() => setIsMenuOpen(true)}
@@ -82,20 +88,14 @@ export default function Header() {
               </div>
               {/* Links */}
               <ul className="flex flex-col gap-6">
-                {[
-                  "About",
-                  "Services",
-                  "Projects",
-                  "Reviews",
-                  "Pricing",
-                  "Blogs",
-                ].map((item) => (
-                  <li key={item} className="cursor-pointer">
+                {navigationLinks.map((link) => (
+                  <li key={link.label} className="cursor-pointer">
                     <Link
+                      href={link.href}
                       className="text-black font-medium hover:text-blue-700 transition"
-                      onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                      onClick={() => setIsMenuOpen(false)}
                     >
-                      {item}
+                      {link.label}
                     </Link>
                   </li>
                 ))}

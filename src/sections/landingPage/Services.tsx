@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Services() {
   return (
-    <section className="">
+    <section className="" id="services">
       <div className="max-w-6xl mx-auto mt-5">
         <h2 className="text-3xl md:text-5xl font-bold sm:mb-6 mb-3">
           What <span className="text-blue-600">We</span> Offer

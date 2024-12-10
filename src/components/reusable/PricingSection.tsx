@@ -18,7 +18,7 @@ export const PricingSection = ({
       <p className="text-gray-600 mb-10">
         Choose the plan that best suits your needs and goals.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
         {plans.map((plan: any, index: number) => (
           <div
             key={index}

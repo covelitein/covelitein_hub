@@ -2,7 +2,7 @@ import { ReviewCard } from "@/components/reusable/ReviewCard";
 import { reviews } from "@/constants";
 
 export const Review = () => (
-  <section className="">
+  <section className="" id="reviews">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-3xl md:text-5xl font-bold md:mb-4">
         What <span className="text-blue-600">Our Clients</span> Say

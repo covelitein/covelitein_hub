@@ -181,3 +181,12 @@ export const reviews = [
       "Exceptional quality and attention to detail. Our project turned out better than expected!",
   },
 ];
+
+export const navigationLinks: { label: string; href: string }[] = [
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Blogs", href: "/#blogs" },
+];

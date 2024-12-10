@@ -3,7 +3,7 @@ import { NextUITheme } from "@/client_theme";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const openSans = localFont({
+const montserrat = localFont({
   src: [
     {
       path: "../../public/fonts/Montserrat-VariableFont_wght.woff2",
@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={openSans.className}>
+      <body className={montserrat.className}>
         <NextUITheme>{children}</NextUITheme>
       </body>
     </html>

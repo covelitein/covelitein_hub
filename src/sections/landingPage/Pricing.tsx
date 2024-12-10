@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Pricing() {
   return (
-    <section className="">
+    <section className="" id="pricing">
       <div className="max-w-6xl mx-auto">
         <PricingSection plans={pricingPlans} title="Our Services Pricing" />
         <PricingSection

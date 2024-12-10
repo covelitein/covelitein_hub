@@ -13,7 +13,7 @@ export default function Hero() {
           <img
             src="/illustrations/rays-of-light.svg"
             width={40}
-            className="absolute hidden sm:block -right-4 top-0 -rotate-[45deg]"
+            className="absolute hidden lg:block right-4 -top-3 -rotate-[45deg]"
             alt="Decorative rays of light"
           />
         </h3>

@@ -4,21 +4,21 @@ import React from "react";
 const blogs = [
   {
     title: "How Digital Transformation is Shaping the Future",
-    image: "https://via.placeholder.com/300",
+    image: "https://images.pexels.com/photos/3194523/pexels-photo-3194523.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Discover how brands are leveraging digital transformation to stay competitive in a rapidly changing world.",
     link: "#",
   },
   {
     title: "5 Tips for Building a Successful Digital Product",
-    image: "https://via.placeholder.com/300",
+    image: "https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Learn key strategies for creating digital products that delight users and drive business growth.",
     link: "#",
   },
   {
     title: "Why Technology Consulting is a Game-Changer",
-    image: "https://via.placeholder.com/300",
+    image: "https://images.pexels.com/photos/3153204/pexels-photo-3153204.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Explore the benefits of working with tech consultants to optimize your processes and achieve your goals.",
     link: "#",
@@ -41,7 +41,7 @@ const BlogCard = ({ blog }: { blog: any }) => (
 );
 
 const Blogs = () => (
-  <section className="py-12">
+  <section className="py-12" id="blogs">
     <div className="max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold mb-6">Latest Blogs</h2>
       <p className="text-gray-600 mb-10">

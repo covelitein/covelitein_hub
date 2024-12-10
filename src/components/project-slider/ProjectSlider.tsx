@@ -17,7 +17,7 @@ export const ProjectSlider: React.FC = () => {
   const { handleSwiper, slideNext, slidePrev, slideTo } = useSwiper();
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto sm:h-[600px] h-[900px]">
+    <div id='projects' className="relative w-full max-w-4xl mx-auto sm:h-[600px] h-[900px]">
       <Swiper
         modules={[Navigation, EffectCreative, Pagination]}
         effect="creative"

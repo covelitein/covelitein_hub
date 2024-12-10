@@ -25,6 +25,7 @@ export default function AboutUs() {
 
   return (
     <motion.div
+      id="about"
       className="py-6 px-4"
       initial="hidden"
       animate="visible"
@@ -56,8 +57,8 @@ export default function AboutUs() {
             {aboutPoints.map((point) => (
               <Card
                 key={point.id}
-                className={`w-full md:w-[20rem] bg-white ${
-                  point.id === 2 ? "self-end" : ""
+                className={`w-full lg:w-[20rem] bg-white ${
+                  point.id === 2 ? "sm:self-end self-start" : ""
                 }`}
               >
                 <CardHeader>
