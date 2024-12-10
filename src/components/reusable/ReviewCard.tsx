@@ -13,7 +13,7 @@ export const ReviewCard = ({ review }: { review: any }) => (
         <h3 className="text-lg font-semibold">{review.name}</h3>
         <div className="flex items-center">
           {Array.from({ length: review.rating }, (_, i) => (
-            <IoIosStar className="h-5 w-5 text-yellow-500"/>
+            <IoIosStar key={review.name} className="h-5 w-5 text-yellow-500"/>
           ))}
         </div>
       </div>
