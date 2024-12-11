@@ -60,21 +60,21 @@ const Footer = () => (
         <p className="text-white">Phone: +1 234 567 890</p>
         <div className="flex space-x-4 mt-4">
           {/* Facebook */}
-          <a href="#" className="text-white hover:text-white">
+          <Link href="https://web.facebook.com/profile.php?id=61570121349465" className="text-white hover:text-white">
             <FaSquareFacebook className="text-3xl" />
-          </a>
+          </Link>
           {/* Twitter */}
-          <a href="#" className="text-white hover:text-white">
+          <Link href="https://x.com/coveliteinzHub" className="text-white hover:text-white">
             <FaXTwitter className="text-3xl" />
-          </a>
+          </Link>
           {/* Instagram */}
-          <a href="#" className="text-white hover:text-white">
+          <Link href="https://www.instagram.com/coveliteinzhub" className="text-white hover:text-white">
             <FaSquareInstagram className="text-3xl" />
-          </a>
+          </Link>
           {/* WhatsApp */}
-          <a href="#" className="text-white hover:text-white">
+          <Link href="#" className="text-white hover:text-white">
             <FaSquareWhatsapp className="text-3xl" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

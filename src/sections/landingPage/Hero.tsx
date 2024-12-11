@@ -23,8 +23,8 @@ export default function Hero() {
           businesses striving to achieve significant tech leverage.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="px-8 py-4 w-full sm:w-auto">Get In Touch</Button>
-          <Button className="px-8 py-4 w-full sm:w-auto text-blue-600 bg-white border-white hover:bg-white hover:text-blue-700">
+          <Button className="px-8 sm:py-4 py-6 w-full sm:w-auto">Get In Touch</Button>
+          <Button className="px-8 sm:py-4 py-6 w-full sm:w-auto text-blue-600 bg-white border-white hover:bg-white hover:text-blue-700">
             Learn More
           </Button>
         </div>

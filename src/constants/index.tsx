@@ -190,3 +190,63 @@ export const navigationLinks: { label: string; href: string }[] = [
   { label: "Pricing", href: "/#pricing" },
   { label: "Blogs", href: "/#blogs" },
 ];
+
+export const blogs = [
+  {
+    title: "How Digital Transformation is Shaping the Future",
+    image:
+      "https://images.pexels.com/photos/3194523/pexels-photo-3194523.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Discover how brands are leveraging digital transformation to stay competitive in a rapidly changing world.",
+    link: "#",
+  },
+  {
+    title: "5 Tips for Building a Successful Digital Product",
+    image:
+      "https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Learn key strategies for creating digital products that delight users and drive business growth.",
+    link: "#",
+  },
+  {
+    title: "Why Technology Consulting is a Game-Changer",
+    image:
+      "https://images.pexels.com/photos/3153204/pexels-photo-3153204.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Explore the benefits of working with tech consultants to optimize your processes and achieve your goals.",
+    link: "#",
+  },
+];
+
+export const faqs: { id: string; question: string; answer: string }[] = [
+  {
+    id: "question-1",
+    question: "What services do you offer?",
+    answer:
+      "We specialize in web and mobile app development, UX/UI design, and providing tech solutions for businesses of all sizes.",
+  },
+  {
+    id: "question-2",
+    question: "How long does it take to build a website?",
+    answer:
+      "The timeline depends on the complexity of the project. On average, it can take 4-12 weeks for a standard website.",
+  },
+  {
+    id: "question-3",
+    question: "Do you provide ongoing support?",
+    answer:
+      "Yes, we offer maintenance and support services to ensure yourwebsite or app remains up-to-date and functional.",
+  },
+  {
+    id: "question-4",
+    question: "What is your pricing structure?",
+    answer:
+      "Our pricing depends on the scope and requirements of the project. Contact us for a custom quote.",
+  },
+  {
+    id: "question-5",
+    question: "Can you work with my existing team?",
+    answer:
+      "Absolutely! We can collaborate with your in-house team to achieve your goals.",
+  },
+];
