@@ -9,6 +9,7 @@ import { Review } from "./Review";
 import Blogs from "./Blogs";
 import Faq from "./Faq";
 import Footer from "./Footer";
+import TechStacks from "./TechStacks";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   Blogs,
   Faq,
   Footer,
+  TechStacks
 };

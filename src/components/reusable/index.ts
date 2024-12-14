@@ -1,5 +1,4 @@
-import HighlightMiddleWord from './HighlightMiddleWord'
+import HighlightMiddleWord from "./HighlightMiddleWord";
+import { TechItem } from "./TechItem";
 
-export {
-    HighlightMiddleWord
-}
+export { HighlightMiddleWord, TechItem };

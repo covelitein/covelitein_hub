@@ -6,6 +6,14 @@ import {
   RefreshCw,
   BookOpen,
   TrendingUp,
+  Layout,
+  Code2,
+  Terminal,
+  Globe,
+  Server,
+  Database,
+  Workflow,
+  Smartphone,
 } from "lucide-react";
 import {
   AiOutlineBook,
@@ -249,4 +257,27 @@ export const faqs: { id: string; question: string; answer: string }[] = [
     answer:
       "Absolutely! We can collaborate with your in-house team to achieve your goals.",
   },
+];
+
+export const stacks1 = [
+  { icon: Layout, text: "HTML5" },
+  { icon: Code2, text: "CSS3" },
+  { icon: Terminal, text: "JavaScript" },
+  { icon: Globe, text: "React" },
+  { icon: Code2, text: "TypeScript" },
+];
+
+export const stacks2 = [
+  { icon: Server, text: "Node.js" },
+  { icon: Database, text: "MongoDB" },
+  { icon: Globe, text: "Express" },
+  { icon: Terminal, text: "Python" },
+  { icon: Database, text: "PostgreSQL" },
+];
+
+export const stacks3 = [
+  { icon: Workflow, text: "Docker" },
+  { icon: Globe, text: "AWS" },
+  { icon: Terminal, text: "Git" },
+  { icon: Smartphone, text: "React Native" },
 ];

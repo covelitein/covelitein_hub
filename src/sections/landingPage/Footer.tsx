@@ -57,7 +57,7 @@ const Footer = () => (
         <p className="text-white">
           Email: <a href="mailto:support@example.com">coveliteinshub@gmail.com</a>
         </p>
-        <p className="text-white">Phone: +1 234 567 890</p>
+        <p className="text-white">Phone: +234-809-625-9176</p>
         <div className="flex space-x-4 mt-4">
           {/* Facebook */}
           <Link href="https://web.facebook.com/profile.php?id=61570121349465" className="text-white hover:text-white">
