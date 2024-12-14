@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NextUITheme } from "@/client_theme";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script";
 
 const montserrat = localFont({
   src: [
@@ -16,12 +17,11 @@ export const metadata: Metadata = {
     process.env.APP_URL
       ? `${process.env.APP_URL}`
       : process.env.VERCEL_URL
-      ? `https://${
-          process.env.VERCEL_URL || "covelitein-hub.vercel.app"
-        }`
+      ? `https://${process.env.VERCEL_URL || "covelitein-hub.vercel.app"}`
       : `http://localhost:${process.env.PORT || 3000}`
   ),
   title: "CoveliteinsHub - Your Gateway to Innovation",
+  
   description:
     "CoveliteHub provides state-of-the-art solutions for businesses, empowering innovation and growth with cutting-edge technology and seamless user experiences.",
   alternates: {
@@ -62,6 +62,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={montserrat.className}>
         <NextUITheme>{children}</NextUITheme>
+        <Script strategy="lazyOnload" src="https://code.tidio.co/w1ttwxax9cksf6hg6cfqntuwfbgqgqe4.js" />
       </body>
     </html>
   );
