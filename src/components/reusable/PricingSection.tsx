@@ -1,3 +1,5 @@
+
+
 import { cn } from "@/lib/utils";
 import HighlightMiddleWord from "./HighlightMiddleWord";
 
@@ -13,7 +15,7 @@ export const PricingSection = ({
   <section className={cn("", className)}>
     <div className="max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold mb-4">
-        <HighlightMiddleWord text={title}/>
+        <HighlightMiddleWord text={title} />
       </h2>
       <p className="text-gray-600 mb-10">
         Choose the plan that best suits your needs and goals.
@@ -29,14 +31,22 @@ export const PricingSection = ({
             }`}
           >
             <h3 className="text-2xl font-semibold mb-4">{plan.title}</h3>
-            <p className="text-xl font-bold mb-4">{plan.price}/month</p>
-            <p className="text-sm mb-6">{plan.description}</p>
+            <p className="text-xl font-bold mb-4">{plan.price}</p>
+            <p className="text-sm mb-4">{plan.description}</p>
+            <p className="text-sm font-medium mb-6">
+              <span className="block mb-2">
+                <strong>Complexity:</strong> {plan.complexity}
+              </span>
+              <span>
+                <strong>Timeframe:</strong> {plan.timeframe}
+              </span>
+            </p>
             <ul className="text-sm space-y-3 mb-6">
               {plan.features.map((feature: any, idx: number) => (
                 <li key={idx} className="flex items-center gap-2">
                   <span
                     className={`${
-                      index == 1 ? "text-white" : "text-blue-500"
+                      plan.isPopular ? "text-white" : "text-blue-500"
                     } `}
                   >
                     <svg

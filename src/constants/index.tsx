@@ -86,8 +86,10 @@ export const services = [
 export const pricingPlans = [
   {
     title: "Starter",
-    price: "$49",
+    price: "$500",
     description: "For individuals or small teams just getting started.",
+    complexity: "Basic Applications (e.g., single-purpose apps, MVPs)",
+    timeframe: "2-4 weeks",
     features: [
       "Custom Software Solutions",
       "Basic Technology Consulting",
@@ -99,8 +101,10 @@ export const pricingPlans = [
   },
   {
     title: "Professional",
-    price: "$99",
+    price: "$1,500",
     description: "Ideal for growing businesses requiring advanced solutions.",
+    complexity: "Intermediate Applications (e.g., multi-feature apps, dashboards)",
+    timeframe: "4-8 weeks",
     features: [
       "Everything in Starter",
       "Digital Product Development",
@@ -112,8 +116,10 @@ export const pricingPlans = [
   },
   {
     title: "Enterprise",
-    price: "$199",
+    price: "$5,000",
     description: "Designed for enterprises needing tailored services.",
+    complexity: "Advanced Applications (e.g., enterprise-grade platforms)",
+    timeframe: "8-12+ weeks",
     features: [
       "Everything in Professional",
       "Custom Technology Strategy",
