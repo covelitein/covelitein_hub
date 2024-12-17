@@ -50,9 +50,9 @@ export default function Header() {
 
         {/* Get in Touch Button for Desktop */}
         <div className="hidden lg:block">
-          <Button className="text-sm bg-blue-700 py-5 px-5 text-white rounded-md font-semibold hover:bg-blue-800">
+          <Link href="/get_quotes" className="text-sm bg-blue-700 py-3 px-5 text-white rounded-md font-semibold hover:bg-blue-800">
             Get in Touch
-          </Button>
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}

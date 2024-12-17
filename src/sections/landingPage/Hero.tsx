@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import { JoinClients } from ".";
+import { Link } from "@nextui-org/react";
 
 export default function Hero() {
   return (
@@ -23,10 +24,18 @@ export default function Hero() {
           businesses striving to achieve significant tech leverage.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="px-8 sm:py-6 py-6 w-full sm:w-auto">Get In Touch</Button>
-          <Button className="px-8 sm:py-6 py-6 w-full sm:w-auto text-blue-600 bg-white border-white hover:bg-white hover:text-blue-700">
+          <Link
+            href="/get_quotes"
+            className="bg-blue-600 px-8 max-sm:flex max-sm:items-center max-sm:justify-center rounded-lg sm:py-5 py-4 text-white font-semibold w-full sm:w-auto"
+          >
+            Get In Touch
+          </Link>
+          <Link
+            href="/#about"
+            className="px-8 sm:py-5 py-4 max-sm:flex max-sm:items-center max-sm:justify-center rounded-lg w-full sm:w-auto text-blue-600 font-semibold bg-white border-white hover:bg-white hover:text-blue-700"
+          >
             Learn More
-          </Button>
+          </Link>
         </div>
         <div className="mt-6 flex items-center justify-center">
           <JoinClients />

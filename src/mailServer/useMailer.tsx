@@ -5,115 +5,148 @@ export default () => {
     service: "gmail",
     auth: {
       user: "coveliteinshub@gmail.com",
-      pass: "bnwrhqgcztzhbykn", // Use app password
+      pass: "bnwrhqgcztzhbykn",
     },
   });
 
-  async function sendMail(content: string) {
-    const info = await transport.sendMail({
-      from: '"Covenant abraham" <abrahamcovenant2004@gmail.com>',
-      to: "coveliteinshub@gmail.com",
-      subject: "Payment request received",
-      html: `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Coveliteinz Hub Email</title>
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" type="text/css">
-        <style>
-          /* Ensure proper rendering */
-          body, p, a, h1, h2, h3 {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-          }
-          body {
-            background-color: #f4f4f4;
-            color: #333;
-          }
-          .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          }
-          .header {
-            background: linear-gradient(135deg, #4c68b6, #f5f5f5, #4c68b6);
-            color: #000;
-            text-align: center;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: 700;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-          }
-          .content {
-            padding: 20px;
-            line-height: 1.6;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-          }
-          .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 20px 0;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: #5f5df7;
-            border-radius: 5px;
-            text-align: center;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-          }
-          .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #999999;
-            padding: 10px;
-            background-color: #e9e9e9;
-            font-family: 'Montserrat', Arial, sans-serif !important;
-          }
-          img {
-            border-radius: 50%;
-            margin: 10px;
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            Innovative Strategies for Modern Businesses
-          </div>
-          <div class="content">
-            <p style="color:#000; font-size: 16px;">
-              We specialize in working with digital products and brands, regardless of their size or lifecycle stage. From startups to established businesses, we strive to achieve significant tech leverage and create value for you.
-            </p>
-            <p style="color:#000; font-size: 16px;">
-              ${content || "Become a client now and enjoy exceptional works!"}
-            </p>
-            <div style="text-align: center;">
-              <a href="https://covelitein-hub.vercel.app/" style="color:#fff" class="button">Get in Touch</a>
-            </div>
-            <div style="text-align: center;">
-              <img src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="Team Member 1" width="50" height="50">
-              <img src="https://i.pravatar.cc/150?u=a04258a2462d826712d" alt="Team Member 2" width="50" height="50">
-              <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Team Member 3" width="50" height="50">
-            </div>
-          </div>
-          <div class="footer">
-            © 2024 Coveliteinz Hub. All rights reserved.
-          </div>
-        </div>
-      </body>
-      </html>
-    `,
-    });
+  async function sendMail({
+    fullname,
+    recipient,
+    planName,
+    features,
+    price,
+  }: {
+    fullname: string;
+    recipient: string;
+    planName: string;
+    features: string[];
+    price: string;
+  }) {
+    try {
+      const info = await transport.sendMail({
+        from: `"CoveliteinzHub" <coveliteinshub@gmail.com>`,
+        to: recipient,
+        subject: "Payment Request Received",
+        html: `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Subscription Payment Details</title>
+          <style>
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-    return info.messageId;
+            body {
+              font-family: "Roboto", sans-serif;
+              background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+              margin: 0;
+              padding: 0;
+            }
+            .container {
+              width: 100%;
+              max-width: 600px;
+              margin: 20px auto;
+              background: #ffffff;
+              border-radius: 8px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            }
+            .header {
+              background-color: #778cc6;
+              color: #ffffff;
+              padding: 10px;
+              text-align: center;
+              font-size: 18px;
+              font-weight: bold;
+            }
+            .content {
+              padding: 20px;
+            }
+            .content h2 {
+              border-bottom: 1px solid #e0e0e0;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+            }
+            .content p {
+              line-height: 1.6;
+            }
+            .footer {
+              background-color: #f9f9f9;
+              padding: 20px;
+              text-align: center;
+              border-top: 1px solid #e0e0e0;
+            }
+            .footer a {
+              color: #778cc6;
+              text-decoration: none;
+            }
+            .cta {
+              background-color: #778cc6;
+              color: #ffffff;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 5px;
+              display: inline-block;
+              margin: 10px 0;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>Payment Request Received</h1>
+            </div>
+            <div class="content">
+              <h2>Subscription Payment Details</h2>
+              <p>
+                Dear ${fullname}, Thank you for requesting our services! We are thrilled to have you on
+                board. Here are the details of your payment plan:
+              </p>
+              <h3>Subscription Plan</h3>
+              <p>Your subscription plan is: <strong>${planName}</strong></p>
+              <h3>Plan Features</h3>
+              <ul>
+                ${features.map((feature) => `<li>${feature}</li>`).join("")}
+              </ul>
+              <p>Amount: <strong>${price}</strong></p>
+              <h3>Payment Information</h3>
+              <p>
+                Please contact us on WhatsApp at <strong> <a href="https://wa.me/+2348131612666" target="_blank" rel="noopener noreferrer">+234-813-161-2666</a></strong> to
+                continue your payment.
+              </p>
+              <h3>Need Help?</h3>
+              <p>
+                For further assistance, contact us on WhatsApp at
+                <strong>+234-813-161-2666</strong> or email us at
+                <a href="mailto:coveliteinshub@gmail.com">coveliteinshub@gmail.com</a
+                >.
+              </p>
+              <a href="https://wa.me/+2348131612666" style="color:#fff;" target="_blank" rel="noopener noreferrer" class="cta"
+                >Chat with Us on WhatsApp</a
+              >
+            </div>
+            <div class="footer">
+              <p>
+                Thank you for choosing our services. We look forward to serving you!
+              </p>
+              <p>
+                If you have any questions, feel free to reach out to our support team
+                at 
+                <a href="mailto:coveliteinshub@gmail.com">coveliteinshub@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `,
+      });
+
+      return info.messageId;
+    } catch (error) {
+      console.error("Error sending email:", error);
+      throw new Error("Failed to send email");
+    }
   }
 
   return {
