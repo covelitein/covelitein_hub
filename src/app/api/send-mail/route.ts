@@ -1,5 +1,5 @@
 import { parsedBody } from "@/app/serverUtils";
-import useMailer from "@/mailServer/useMailer";
+import { sendMail } from "@/mailServer/useMailer";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     const { fullname, email, title, features, price } = validatedData;
 
     // Use the mailer utility to send the email
-    const mailerInfo = await useMailer().sendMail({
+    const mailerInfo = await sendMail({
       fullname: fullname,
       recipient: email,
       planName: title,

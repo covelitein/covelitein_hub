@@ -201,7 +201,7 @@ export const PricingSection = ({
                                 />
                               </FormControl>
                               <FormDescription className="text-sm">
-                                We'll use this email to contact you.
+                                We&apos;ll use this email to contact you.
                               </FormDescription>
                               <FormMessage />
                             </FormItem>
