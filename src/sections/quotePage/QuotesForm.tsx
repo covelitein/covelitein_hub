@@ -1,13 +1,21 @@
-'use client';
+"use client";
 
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 // Validation schema
 const contactSchema = z.object({
@@ -23,10 +31,56 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export default function ContactForm() {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log("Form Data:", data);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<string | null>(null);
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/coveliteinshub@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            subject: `New Contact from ${data.firstName} ${data.lastName}`,
+            email: data.email,
+            message: `
+            <strong>First Name:</strong> ${data.firstName}<br/>
+            <strong>Last Name:</strong> ${data.lastName}<br/>
+            <strong>Email:</strong> ${data.email}<br/>
+            <strong>Phone:</strong> ${data.phone}<br/>
+            <strong>Message:</strong> ${data.message}
+          `,
+          }),
+        }
+      );
+
+      if (response.ok) {
+        form.reset();
+        setSubmitMessage("Your message has been successfully sent. Thank you!");
+      } else {
+        throw new Error("Submission failed. Please try again later.");
+      }
+    } catch (error) {
+      setSubmitMessage((error as Error).message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -44,14 +98,15 @@ export default function ContactForm() {
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
           className="p-8"
         >
-          <h2 className="text-3xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+          <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+            Contact Us
+          </h2>
           <p className="text-gray-600 mb-6">
             Our friendly team would love to hear from you!
           </p>
 
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              {/* First Name */}
               <FormField
                 control={form.control}
                 name="firstName"
@@ -65,7 +120,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              {/* Last Name */}
               <FormField
                 control={form.control}
                 name="lastName"
@@ -79,7 +133,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              {/* Email */}
               <FormField
                 control={form.control}
                 name="email"
@@ -93,7 +146,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              {/* Phone */}
               <FormField
                 control={form.control}
                 name="phone"
@@ -107,7 +159,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-              {/* Message */}
               <FormField
                 control={form.control}
                 name="message"
@@ -127,12 +178,21 @@ export default function ContactForm() {
                 )}
               />
 
-              {/* Submit Button */}
-              <Button type="submit" className="w-full">
-                Send Message
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Form>
+
+          {submitMessage && (
+            <p
+              className={`mt-4 text-sm ${
+                isSubmitting ? "text-gray-500" : "text-green-600"
+              }`}
+            >
+              {submitMessage}
+            </p>
+          )}
         </motion.div>
 
         {/* Right Column: Contact Info or Map */}
@@ -144,7 +204,6 @@ export default function ContactForm() {
         >
           <h3 className="text-xl font-semibold text-gray-800 mb-4">Visit Us</h3>
           <p className="text-gray-600 mb-6">We’re located here:</p>
-          {/* Google Maps Placeholder */}
           <div className="w-full h-64 bg-gray-300 rounded-lg">
             <iframe
               src="https://maps.google.com/maps?q=Port%20Harcourt&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -157,10 +216,10 @@ export default function ContactForm() {
               <strong>Email:</strong> contact@example.com
             </p>
             <p className="text-gray-700">
-              <strong>Phone:</strong> +1 (234) 567-890
+              <strong>Phone:</strong> +234-813-161-2666
             </p>
             <p className="text-gray-700">
-              <strong>Address:</strong> 123 Main Street, Port Harcourt, Nigeria
+              <strong>Address:</strong> RSU maingate Port Harcourt, Nigeria
             </p>
           </div>
         </motion.div>

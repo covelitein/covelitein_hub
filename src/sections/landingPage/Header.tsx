@@ -101,9 +101,9 @@ export default function Header() {
                 ))}
               </ul>
               {/* Button */}
-              <Button className="mt-4 text-sm bg-blue-700 py-3 w-full text-white rounded-md font-semibold hover:bg-blue-800">
+              <Link onClick={() => setIsMenuOpen(false)} href="/get_quotes" className="mt-4 text-sm bg-blue-700 py-3 w-full text-white rounded-md font-semibold hover:bg-blue-800 flex items-center justify-center">
                 Get in Touch
-              </Button>
+              </Link>
             </div>
           </motion.div>
         )}

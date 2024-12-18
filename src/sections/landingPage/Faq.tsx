@@ -12,7 +12,7 @@ import { faqs } from "@/constants";
 
 export default function Faq() {
   return (
-    <section className="py-10">
+    <section id="faq" className="py-10">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">
           <HighlightMiddleWord text={"Frequently Asked Questions"} />

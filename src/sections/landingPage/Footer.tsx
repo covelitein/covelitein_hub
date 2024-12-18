@@ -29,24 +29,24 @@ const Footer = () => (
         <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
         <ul>
           <li>
-            <a href="#" className="text-black hover:text-black">
+            <Link href="/#services" className="text-black hover:text-black">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-black">
+            <Link href="/#blogs" className="text-black hover:text-black">
               Blogs
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-black">
+            <Link href="/get_quotes" className="text-black hover:text-black">
               Contact Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="text-black hover:text-white">
+            <Link href="/#faq" className="text-black hover:text-white">
               FAQ
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -57,7 +57,7 @@ const Footer = () => (
         <p className="text-black">
           Email: <a href="mailto:support@example.com">coveliteinshub@gmail.com</a>
         </p>
-        <p className="text-black">Phone: +234-809-625-9176</p>
+        <p className="text-black">Phone: +234-813-161-2666</p>
         <div className="flex space-x-4 mt-4">
           {/* Facebook */}
           <Link href="https://web.facebook.com/profile.php?id=61570121349465" className="text-blue-800 hover:text-blue-800">
