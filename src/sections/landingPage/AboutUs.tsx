@@ -5,6 +5,7 @@ import { Card, CardHeader } from "@/components/ui/card";
 import React from "react";
 import { motion } from "framer-motion";
 import { aboutPoints } from "@/constants";
+import { useRouter } from "next/navigation";
 
 export default function AboutUs() {
   // Framer Motion Variants
@@ -22,6 +23,12 @@ export default function AboutUs() {
     hidden: { opacity: 0, x: 50 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.7 } },
   };
+
+  const router = useRouter()
+
+  const handleNavigation = ()=> {
+    router.push('/get_quotes')
+  }
 
   return (
     <motion.div
@@ -41,7 +48,7 @@ export default function AboutUs() {
             creating websites and mobile apps tailored to meet the needs of
             businesses of all sizes, from small startups to large enterprises.
           </p>
-          <Button className="border-2 border-blue-400 bg-transparent text-blue-600 mt-4 hover:text-white">
+          <Button onClick={handleNavigation} className="border-2 border-blue-400 bg-transparent text-blue-600 mt-4 hover:text-white">
             Get In Touch
           </Button>
         </motion.div>
