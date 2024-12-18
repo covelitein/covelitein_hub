@@ -15,7 +15,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // Validation schema
 const contactSchema = z.object({
@@ -82,6 +82,16 @@ export default function ContactForm() {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (submitMessage) {
+      const timer = setTimeout(() => {
+        setSubmitMessage(null);
+      }, 5000);
+
+      return () => clearTimeout(timer); // Cleanup timer on component unmount or message change
+    }
+  }, [submitMessage]);
 
   return (
     <section className="py-16 bg-gray-50">
